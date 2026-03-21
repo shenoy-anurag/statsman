@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import { CartesianGrid, Area, AreaChart, XAxis, YAxis } from "recharts";
+import { generateEraGradient } from "@/components/PoliticalEraBackground";
 import {
   ChartConfig,
   ChartContainer,
@@ -14,18 +15,22 @@ interface IndicatorChartProps {
   data: MergedDataPoint[];
   countryCodes: string[];
   indicatorName: string;
+  overlayEras?: string[]; // Optionally specify exactly which countries should overlay backgrounds
 }
 
-export function IndicatorChart({ data, countryCodes, indicatorName }: IndicatorChartProps) {
+export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras }: IndicatorChartProps) {
+  const minYear = data.length > 0 ? data[0].year : 1900;
+  const maxYear = data.length > 0 ? data[data.length - 1].year : 2025;
+  const countriesToOverlay = overlayEras || (countryCodes.length === 1 ? countryCodes : []);
   // Dynamically create a configuration for shadcn chart based on selected countries
   const chartConfig = useMemo(() => {
     const config: ChartConfig = {};
     const colors = [
-      "hsl(var(--chart-1))", 
-      "hsl(var(--chart-2))", 
-      "hsl(var(--chart-3))", 
-      "hsl(var(--chart-4))", 
-      "hsl(var(--chart-5))"
+      "var(--color-chart-1)", 
+      "var(--color-chart-2)", 
+      "var(--color-chart-3)", 
+      "var(--color-chart-4)", 
+      "var(--color-chart-5)"
     ];
     countryCodes.forEach((code, i) => {
       config[code] = {
@@ -81,7 +86,18 @@ export function IndicatorChart({ data, countryCodes, indicatorName }: IndicatorC
     <div className="w-full flex-col flex items-start gap-4">
       <h3 className="text-xl font-bold tracking-tight">{indicatorName}</h3>
       <ChartContainer config={chartConfig} className="h-[500px] w-full bg-card rounded-xl border p-4 shadow-sm">
-        <LineChart accessibilityLayer data={data} margin={{ left: 16, right: 16, top: 16, bottom: 16 }}>
+        <AreaChart accessibilityLayer data={data} margin={{ left: 16, right: 16, top: 16, bottom: 16 }}>
+          <defs>
+            {countryCodes.map(code => 
+              generateEraGradient({ 
+                countryCode: code, 
+                minYear, 
+                maxYear, 
+                opacity: countriesToOverlay.length > 1 ? 0.08 : 0.18,
+                enabled: countriesToOverlay.includes(code)
+              })
+            )}
+          </defs>
           <CartesianGrid vertical={false} opacity={0.3} />
           <XAxis
             dataKey="year"
@@ -96,27 +112,28 @@ export function IndicatorChart({ data, countryCodes, indicatorName }: IndicatorC
             tickMargin={12} 
             width={80}
             tickFormatter={(value) => {
-              // Concise large number formatting for Y axis
               if (value >= 1e9) return (value / 1e9).toFixed(1) + 'B';
               if (value >= 1e6) return (value / 1e6).toFixed(1) + 'M';
               if (value >= 1e3) return (value / 1e3).toFixed(1) + 'K';
               return value.toLocaleString();
             }} 
           />
-          {/* We replace default shadcn tooltip with our custom political era tooltip */}
           <ChartTooltip cursor={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "4 4" }} content={<CustomTooltipContent />} />
+          
           {countryCodes.map((code) => (
-            <Line
+            <Area
               key={code}
               dataKey={code}
               type="monotone"
+              fill={`url(#era-gradient-${code})`}
               stroke={`var(--color-${code})`}
               strokeWidth={3}
+              fillOpacity={1}
               dot={false}
               activeDot={{ r: 6, strokeWidth: 0 }}
             />
           ))}
-        </LineChart>
+        </AreaChart>
       </ChartContainer>
     </div>
   );
