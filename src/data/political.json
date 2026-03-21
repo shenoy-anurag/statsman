@@ -1,0 +1,40 @@
+{
+  "IND": [
+    { "leader": "Jawaharlal Nehru", "party": "INC", "color": "#00BFFF", "start": 1947, "end": 1964 },
+    { "leader": "Lal Bahadur Shastri", "party": "INC", "color": "#00BFFF", "start": 1964, "end": 1966 },
+    { "leader": "Indira Gandhi", "party": "INC", "color": "#00BFFF", "start": 1966, "end": 1977 },
+    { "leader": "Morarji Desai", "party": "Janata Party", "color": "#FF9933", "start": 1977, "end": 1979 },
+    { "leader": "Charan Singh", "party": "Janata Party", "color": "#FF9933", "start": 1979, "end": 1980 },
+    { "leader": "Indira Gandhi", "party": "INC", "color": "#00BFFF", "start": 1980, "end": 1984 },
+    { "leader": "Rajiv Gandhi", "party": "INC", "color": "#00BFFF", "start": 1984, "end": 1989 },
+    { "leader": "V. P. Singh", "party": "Janata Dal", "color": "#008000", "start": 1989, "end": 1990 },
+    { "leader": "Chandra Shekhar", "party": "Samajwadi Janata Party", "color": "#808000", "start": 1990, "end": 1991 },
+    { "leader": "P. V. Narasimha Rao", "party": "INC", "color": "#00BFFF", "start": 1991, "end": 1996 },
+    { "leader": "Atal Bihari Vajpayee", "party": "BJP", "color": "#FF9933", "start": 1996, "end": 1996 },
+    { "leader": "H. D. Deve Gowda", "party": "Janata Dal", "color": "#008000", "start": 1996, "end": 1997 },
+    { "leader": "I. K. Gujral", "party": "Janata Dal", "color": "#008000", "start": 1997, "end": 1998 },
+    { "leader": "Atal Bihari Vajpayee", "party": "BJP", "color": "#FF9933", "start": 1998, "end": 2004 },
+    { "leader": "Manmohan Singh", "party": "INC", "color": "#00BFFF", "start": 2004, "end": 2014 },
+    { "leader": "Narendra Modi", "party": "BJP", "color": "#FF9933", "start": 2014, "end": 2025 }
+  ],
+  "CHN": [
+    { "leader": "Mao Zedong", "party": "CPC", "color": "#FF0000", "start": 1949, "end": 1976 },
+    { "leader": "Hua Guofeng", "party": "CPC", "color": "#FF0000", "start": 1976, "end": 1978 },
+    { "leader": "Deng Xiaoping", "party": "CPC", "color": "#FF0000", "start": 1978, "end": 1989 },
+    { "leader": "Jiang Zemin", "party": "CPC", "color": "#FF0000", "start": 1989, "end": 2002 },
+    { "leader": "Hu Jintao", "party": "CPC", "color": "#FF0000", "start": 2002, "end": 2012 },
+    { "leader": "Xi Jinping", "party": "CPC", "color": "#FF0000", "start": 2012, "end": 2025 }
+  ],
+  "USA": [
+    { "leader": "Richard Nixon", "party": "Republican", "color": "#FF0000", "start": 1969, "end": 1974 },
+    { "leader": "Gerald Ford", "party": "Republican", "color": "#FF0000", "start": 1974, "end": 1977 },
+    { "leader": "Jimmy Carter", "party": "Democratic", "color": "#0000FF", "start": 1977, "end": 1981 },
+    { "leader": "Ronald Reagan", "party": "Republican", "color": "#FF0000", "start": 1981, "end": 1989 },
+    { "leader": "George H.W. Bush", "party": "Republican", "color": "#FF0000", "start": 1989, "end": 1993 },
+    { "leader": "Bill Clinton", "party": "Democratic", "color": "#0000FF", "start": 1993, "end": 2001 },
+    { "leader": "George W. Bush", "party": "Republican", "color": "#FF0000", "start": 2001, "end": 2009 },
+    { "leader": "Barack Obama", "party": "Democratic", "color": "#0000FF", "start": 2009, "end": 2017 },
+    { "leader": "Donald Trump", "party": "Republican", "color": "#FF0000", "start": 2017, "end": 2021 },
+    { "leader": "Joe Biden", "party": "Democratic", "color": "#0000FF", "start": 2021, "end": 2025 }
+  ]
+}
