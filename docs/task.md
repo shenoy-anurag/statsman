@@ -33,4 +33,7 @@
   - [x] Implement UI for upcoming curated data series
 - [x] Phase 8: Polish & Refinement
   - [x] Fix tooltip data formatting scope and precision (IndicatorChart.tsx)
+  - [x] Add a separator in the navbar to visually distinguish between the logo and dashboards.
+  - [x] Curate a new color palette for the visualizations.
+  - [x] Implement a collapsible navbar for mobile devices with smaller screens.
 
