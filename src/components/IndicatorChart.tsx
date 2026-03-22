@@ -26,12 +26,34 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras 
   // Dynamically create a configuration for shadcn chart based on selected countries
   const chartConfig = useMemo(() => {
     const config: ChartConfig = {};
+    // const colors = [
+    //   "var(--color-chart-1)",
+    //   "var(--color-chart-2)",
+    //   "var(--color-chart-3)",
+    //   "var(--color-chart-4)",
+    //   "var(--color-chart-5)"
+    // ];
+    // const colors = [
+    //   "var(--color-blue-slate-700)",
+    //   "var(--color-golden-bronze-400)",
+    //   "var(--color-pale-oak-300)",
+    //   "var(--color-dusty-olive-700)",
+    //   "var(--color-cinnamon-wood-500)",
+    //   "var(--color-dark-khaki-800)",
+    //   "var(--color-reddish-brown-600)",
+    //   "var(--color-steel-blue-400)",
+    // ];
     const colors = [
-      "var(--color-chart-1)",
-      "var(--color-chart-2)",
-      "var(--color-chart-3)",
-      "var(--color-chart-4)",
-      "var(--color-chart-5)"
+      "var(--color-blue-slate-2-600)",
+      "var(--color-strawberry-red-400)",
+      "var(--color-dark-cyan-600)",
+      "var(--color-cerulean-600)",
+      "var(--color-carrot-orange-500)",
+      "var(--color-coral-glow-400)",
+      "var(--color-seagrass-500)",
+      "var(--color-atomic-tangerine-400)",
+      "var(--color-tuscan-sun-400)",
+      "var(--color-willow-green-400)",
     ];
     countryCodes.forEach((code, i) => {
       config[code] = {
@@ -129,7 +151,7 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras 
                   countryCode: code,
                   minYear,
                   maxYear,
-                  opacity: countriesToOverlay.length > 1 ? 0.08 : 0.18,
+                  opacity: countriesToOverlay.length > 1 ? 0.08 : 0.3,
                   enabled: countriesToOverlay.includes(code)
                 })
               )}
