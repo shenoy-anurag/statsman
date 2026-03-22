@@ -81,6 +81,243 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Color Palette */
+  /* https://coolors.co/d6c9b8-b25f3e-8c4a32-caa958-777745-3d3e1e-84a7c3-3f627e */
+  /* Pale Oak */
+  --color-pale-oak-50: #f6f3ef;
+  --color-pale-oak-100: #ece6df;
+  --color-pale-oak-200: #dacebe;
+  --color-pale-oak-300: #c7b59e;
+  --color-pale-oak-400: #b59d7d;
+  --color-pale-oak-500: #a2845d;
+  --color-pale-oak-600: #826a4a;
+  --color-pale-oak-700: #614f38;
+  --color-pale-oak-800: #413525;
+  --color-pale-oak-900: #201a13;
+  --color-pale-oak-950: #17120d;
+
+  /* Cinnamon Wood */
+  --color-cinnamon-wood-50: #f8f0ec;
+  --color-cinnamon-wood-100: #f2e0d9;
+  --color-cinnamon-wood-200: #e4c1b4;
+  --color-cinnamon-wood-300: #d7a38e;
+  --color-cinnamon-wood-400: #ca8468;
+  --color-cinnamon-wood-500: #bd6542;
+  --color-cinnamon-wood-600: #975135;
+  --color-cinnamon-wood-700: #713d28;
+  --color-cinnamon-wood-800: #4b281b;
+  --color-cinnamon-wood-900: #26140d;
+  --color-cinnamon-wood-950: #1a0e09;
+
+  /* Reddish Brown */
+  --color-reddish-brown-50: #f8efec;
+  --color-reddish-brown-100: #f1e0da;
+  --color-reddish-brown-200: #e4c1b4;
+  --color-reddish-brown-300: #d6a28f;
+  --color-reddish-brown-400: #c98369;
+  --color-reddish-brown-500: #bb6444;
+  --color-reddish-brown-600: #965036;
+  --color-reddish-brown-700: #703c29;
+  --color-reddish-brown-800: #4b281b;
+  --color-reddish-brown-900: #25140e;
+  --color-reddish-brown-950: #1a0e09;
+
+  /* Golden Bronze */
+  --color-golden-bronze-50: #f9f5ec;
+  --color-golden-bronze-100: #f3ebd8;
+  --color-golden-bronze-200: #e7d7b1;
+  --color-golden-bronze-300: #dac48b;
+  --color-golden-bronze-400: #ceb064;
+  --color-golden-bronze-500: #c29c3d;
+  --color-golden-bronze-600: #9b7d31;
+  --color-golden-bronze-700: #745e25;
+  --color-golden-bronze-800: #4e3e18;
+  --color-golden-bronze-900: #271f0c;
+  --color-golden-bronze-950: #1b1609;
+
+  /* Dusty Olive */
+  --color-dusty-olive-50: #f6f6ef;
+  --color-dusty-olive-100: #ececdf;
+  --color-dusty-olive-200: #dadabe;
+  --color-dusty-olive-300: #c7c79e;
+  --color-dusty-olive-400: #b5b57d;
+  --color-dusty-olive-500: #a2a25d;
+  --color-dusty-olive-600: #82824a;
+  --color-dusty-olive-700: #616138;
+  --color-dusty-olive-800: #414125;
+  --color-dusty-olive-900: #202013;
+  --color-dusty-olive-950: #17170d;
+
+  /* Dark Khaki */
+  --color-dark-khaki-50: #f6f7ee;
+  --color-dark-khaki-100: #eeeedd;
+  --color-dark-khaki-200: #dddeba;
+  --color-dark-khaki-300: #cbcd98;
+  --color-dark-khaki-400: #babd75;
+  --color-dark-khaki-500: #a9ac53;
+  --color-dark-khaki-600: #878a42;
+  --color-dark-khaki-700: #656732;
+  --color-dark-khaki-800: #444521;
+  --color-dark-khaki-900: #222211;
+  --color-dark-khaki-950: #18180c;
+
+  /* Steel Blue */
+  --color-steel-blue-50: #eef3f7;
+  --color-steel-blue-100: #dde6ee;
+  --color-steel-blue-200: #bbcedd;
+  --color-steel-blue-300: #98b5cd;
+  --color-steel-blue-400: #769cbc;
+  --color-steel-blue-500: #5484ab;
+  --color-steel-blue-600: #436989;
+  --color-steel-blue-700: #324f67;
+  --color-steel-blue-800: #223544;
+  --color-steel-blue-900: #111a22;
+  --color-steel-blue-950: #0c1218;
+
+  /* Blue Slate */
+  --color-blue-slate-50: #eef3f6;
+  --color-blue-slate-100: #dde6ee;
+  --color-blue-slate-200: #bbcedd;
+  --color-blue-slate-300: #99b5cc;
+  --color-blue-slate-400: #779cbb;
+  --color-blue-slate-500: #5584aa;
+  --color-blue-slate-600: #446988;
+  --color-blue-slate-700: #334f66;
+  --color-blue-slate-800: #223544;
+  --color-blue-slate-900: #111a22;
+  --color-blue-slate-950: #0c1218;
+
+  /* Alternate Color Palette: https://coolors.co/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1 */
+  /* Strawberry Red #F94144 */
+  --color-strawberry-red-50: #fee6e7;
+  --color-strawberry-red-100: #fdcece;
+  --color-strawberry-red-200: #fc9c9e;
+  --color-strawberry-red-300: #fa6b6d;
+  --color-strawberry-red-400: #f9393c;
+  --color-strawberry-red-500: #f7080c;
+  --color-strawberry-red-600: #c60609;
+  --color-strawberry-red-700: #940507;
+  --color-strawberry-red-800: #630305;
+  --color-strawberry-red-900: #310202;
+  --color-strawberry-red-950: #230102;
+
+  /* Atomic Tangerine #F3722C */
+  --color-atomic-tangerine-50: #feefe7;
+  --color-atomic-tangerine-100: #fcdfcf;
+  --color-atomic-tangerine-200: #f9be9f;
+  --color-atomic-tangerine-300: #f79e6e;
+  --color-atomic-tangerine-400: #f47e3e;
+  --color-atomic-tangerine-500: #f15d0e;
+  --color-atomic-tangerine-600: #c14b0b;
+  --color-atomic-tangerine-700: #913808;
+  --color-atomic-tangerine-800: #602506;
+  --color-atomic-tangerine-900: #301303;
+  --color-atomic-tangerine-950: #220d02;
+
+  /* Carrot Orange #F8961E */
+  --color-carrot-orange-50: #fef3e6;
+  --color-carrot-orange-100: #fde8ce;
+  --color-carrot-orange-200: #fcd19c;
+  --color-carrot-orange-300: #faba6b;
+  --color-carrot-orange-400: #f9a339;
+  --color-carrot-orange-500: #f78b08;
+  --color-carrot-orange-600: #c67006;
+  --color-carrot-orange-700: #945405;
+  --color-carrot-orange-800: #633803;
+  --color-carrot-orange-900: #311c02;
+  --color-carrot-orange-950: #231401;
+
+  /* Coral Glow #F9844A */
+  --color-coral-glow-50: #feeee6;
+  --color-coral-glow-100: #fddece;
+  --color-coral-glow-200: #fcbc9c;
+  --color-coral-glow-300: #fa9b6b;
+  --color-coral-glow-400: #f97939;
+  --color-coral-glow-500: #f75808;
+  --color-coral-glow-600: #c64606;
+  --color-coral-glow-700: #943505;
+  --color-coral-glow-800: #632303;
+  --color-coral-glow-900: #311202;
+  --color-coral-glow-950: #230c01;
+
+  /* Tuscan Sun #F9C74F */
+  --color-tuscan-sun-50: #fef7e6;
+  --color-tuscan-sun-100: #fdefce;
+  --color-tuscan-sun-200: #fbdf9d;
+  --color-tuscan-sun-300: #facf6b;
+  --color-tuscan-sun-400: #f8bf3a;
+  --color-tuscan-sun-500: #f6af09;
+  --color-tuscan-sun-600: #c58c07;
+  --color-tuscan-sun-700: #946905;
+  --color-tuscan-sun-800: #624604;
+  --color-tuscan-sun-900: #312302;
+  --color-tuscan-sun-950: #221801;
+
+  /* Willow Green #90BE6D */
+  --color-willow-green-50: #f2f7ed;
+  --color-willow-green-100: #e4efdc;
+  --color-willow-green-200: #c9dfb9;
+  --color-willow-green-300: #afd095;
+  --color-willow-green-400: #94c072;
+  --color-willow-green-500: #79b04f;
+  --color-willow-green-600: #618d3f;
+  --color-willow-green-700: #496a2f;
+  --color-willow-green-800: #304620;
+  --color-willow-green-900: #182310;
+  --color-willow-green-950: #11190b;
+
+  /* Seagrass #43AA8B */
+  --color-seagrass-50: #edf8f4;
+  --color-seagrass-100: #dbf0ea;
+  --color-seagrass-200: #b6e2d5;
+  --color-seagrass-300: #92d3c0;
+  --color-seagrass-400: #6dc5ab;
+  --color-seagrass-500: #49b695;
+  --color-seagrass-600: #3a9278;
+  --color-seagrass-700: #2c6d5a;
+  --color-seagrass-800: #1d493c;
+  --color-seagrass-900: #0f241e;
+  --color-seagrass-950: #0a1a15;
+
+  /* Dark Cyan #4D908E */
+  --color-dark-cyan-50: #eef6f6;
+  --color-dark-cyan-100: #deeded;
+  --color-dark-cyan-200: #bddbda;
+  --color-dark-cyan-300: #9cc9c8;
+  --color-dark-cyan-400: #7ab8b6;
+  --color-dark-cyan-500: #59a6a3;
+  --color-dark-cyan-600: #478583;
+  --color-dark-cyan-700: #366362;
+  --color-dark-cyan-800: #244241;
+  --color-dark-cyan-900: #122121;
+  --color-dark-cyan-950: #0c1717;
+
+  /* Blue Slate #577590 */
+  --color-blue-slate-2-50: #eff2f5;
+  --color-blue-slate-2-100: #dfe6ec;
+  --color-blue-slate-2-200: #bfcdd9;
+  --color-blue-slate-2-300: #9fb4c6;
+  --color-blue-slate-2-400: #809bb3;
+  --color-blue-slate-2-500: #60829f;
+  --color-blue-slate-2-600: #4d6880;
+  --color-blue-slate-2-700: #394e60;
+  --color-blue-slate-2-800: #263440;
+  --color-blue-slate-2-900: #131a20;
+  --color-blue-slate-2-950: #0d1216;
+
+  /* Cerulean #277DA1 */
+  --color-cerulean-50: #eaf5fa;
+  --color-cerulean-100: #d6ecf5;
+  --color-cerulean-200: #add8eb;
+  --color-cerulean-300: #84c5e1;
+  --color-cerulean-400: #5bb2d7;
+  --color-cerulean-500: #329fcd;
+  --color-cerulean-600: #287fa4;
+  --color-cerulean-700: #1e5f7b;
+  --color-cerulean-800: #143f52;
+  --color-cerulean-900: #0a2029;
+  --color-cerulean-950: #07161d;
 }
 
 .dark {
@@ -121,9 +358,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

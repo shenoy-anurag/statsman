@@ -31,4 +31,6 @@
   - [x] Create dedicated India dashboard (`/india`) with curated metrics
   - [x] Add custom SVG icons (India flag, Github, etc.) and update Navigation Bar
   - [x] Implement UI for upcoming curated data series
+- [x] Phase 8: Polish & Refinement
+  - [x] Fix tooltip data formatting scope and precision (IndicatorChart.tsx)
 
