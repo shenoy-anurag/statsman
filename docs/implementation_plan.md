@@ -58,6 +58,9 @@ Create a highly interactive and stunning web application to visualize economic a
 
 #### Phase 8: Polish & Refinement
 - Fixed tooltip data formatting issues in `IndicatorChart.tsx`, resolving variable scope errors and fine-tuning numeric precision for trillion (T), billion (B), million (M), and thousand (K) scales to improve readability across different economic metrics.
+- Added a separator in the navbar to visually distinguish between the logo and dashboards.
+- Curated a new color palette for the visualizations.
+- Implemented a collapsible navbar for mobile devices with smaller screens.
 
 ## Verification Plan
 
