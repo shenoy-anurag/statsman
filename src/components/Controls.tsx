@@ -60,12 +60,14 @@ export function Controls({ initialIndicator, initialCountries, initialStart, ini
         <label className="text-sm font-semibold text-foreground">Indicator</label>
         <Select value={indicator} onValueChange={(val) => setIndicator(val)}>
           <SelectTrigger className="w-full bg-background">
-            <SelectValue placeholder="Select Indicator" />
+            <SelectValue placeholder="Select Indicator">
+              {INDICATORS.find(ind => ind.id === indicator)?.shortName}
+            </SelectValue>
           </SelectTrigger>
           <SelectContent className="w-full bg-background">
             {INDICATORS.map(ind => (
               <SelectItem key={ind.id} value={ind.id}>
-                {ind.name}
+                {ind.shortName}
               </SelectItem>
             ))}
           </SelectContent>

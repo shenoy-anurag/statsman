@@ -71,7 +71,7 @@ export default async function DashboardHome() {
                 <PaperTexture />
                 <div className="mb-4 flex items-center justify-between">
                   <h2 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                    {item.config.name}
+                    {item.config.shortName}
                   </h2>
                   <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">
                     Explore →

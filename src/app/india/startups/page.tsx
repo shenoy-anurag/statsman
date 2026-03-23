@@ -2,7 +2,6 @@ import { IndicatorChart } from "@/components/IndicatorChart";
 import { MergedDataPoint } from "@/lib/data-merger";
 import { ChevronLeft, Info, ExternalLink, Calendar, Database } from "lucide-react";
 import Link from "next/link";
-import SvgIcon from "@/components/icons/svg-icon";
 import { PaperTexture } from "@/components/PaperTexture";
 import startupDataRaw from "@/data/india-startup-yearwise-count.json";
 import { getPoliticalEra } from "@/lib/political-data";

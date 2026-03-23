@@ -108,7 +108,7 @@ export default async function IndiaDashboard() {
               >
                 <PaperTexture />
                 <div className="mb-4 flex items-center justify-between">
-                  <h2 className="text-xl font-semibold group-hover/link:text-primary transition-colors tracking-tight">{item.config.name}</h2>
+                  <h2 className="text-xl font-semibold group-hover/link:text-primary transition-colors tracking-tight">{item.config.shortName}</h2>
                   <ArrowUpRight className="h-5 w-5 opacity-0 group-hover/chart:opacity-100 group-hover/chart:translate-x-1 group-hover/chart:-translate-y-1 transition-all text-primary" />
                 </div>
                 <div className="w-full flex-grow relative min-h-[300px]">

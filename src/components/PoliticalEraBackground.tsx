@@ -9,17 +9,19 @@ export interface EraGradientProps {
   maxYear: number;
   opacity?: number;
   enabled?: boolean;
+  id?: string;
 }
 
 /**
  * Generates an SVG `<linearGradient>` with hard stops corresponding exactly to 
  * the political eras within the X-axis bounds. This is used as an Area fill in Recharts.
  */
-export function generateEraGradient({ countryCode, minYear, maxYear, opacity = 0.2, enabled = true }: EraGradientProps) {
+export function generateEraGradient({ countryCode, minYear, maxYear, opacity = 0.2, enabled = true, id }: EraGradientProps) {
+  const gradientId = id || `era-gradient-${countryCode}`;
   const defaultGradient = (
-    <linearGradient id={`era-gradient-${countryCode}`} x1="0" y1="0" x2="0" y2="1" key={`era-gradient-${countryCode}`}>
-      <stop offset="5%" stopColor="transparent" stopOpacity={0}/>
-      <stop offset="95%" stopColor="transparent" stopOpacity={0}/>
+    <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1" key={gradientId}>
+      <stop offset="5%" stopColor="transparent" stopOpacity={0} />
+      <stop offset="95%" stopColor="transparent" stopOpacity={0} />
     </linearGradient>
   );
 
@@ -27,7 +29,7 @@ export function generateEraGradient({ countryCode, minYear, maxYear, opacity = 0
 
   const eras = getPoliticalErasForCountry(countryCode);
   const range = maxYear - minYear;
-  
+
   if (!eras || eras.length === 0 || range <= 0) return defaultGradient;
 
   // Pre-calculate party streaks globally so shading remains stable during scrolling bounds
@@ -57,7 +59,7 @@ export function generateEraGradient({ countryCode, minYear, maxYear, opacity = 0
   const addBlock = (start: number, end: number, color: string, blockOpacity: number) => {
     const startPct = Math.max(0, (start - minYear) / range);
     const endPct = Math.min(1, (end - minYear) / range);
-    
+
     // Hard boundary start and end strictly mapping to exact percentages on the chart path width
     stops.push(
       <stop key={`stop-${keyCounter++}`} offset={`${(startPct * 100).toFixed(3)}%`} stopColor={color} stopOpacity={blockOpacity} />,
@@ -88,7 +90,7 @@ export function generateEraGradient({ countryCode, minYear, maxYear, opacity = 0
 
   // Using horizontal gradient spanning exactly the bounding box width of the `<Area>` path map
   return (
-    <linearGradient id={`era-gradient-${countryCode}`} x1="0" y1="0" x2="1" y2="0" key={`era-gradient-${countryCode}`}>
+    <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="0" key={gradientId}>
       {stops}
     </linearGradient>
   );

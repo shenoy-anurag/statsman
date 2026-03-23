@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useId, useMemo, useState, useEffect } from "react";
 import { CartesianGrid, Area, AreaChart, XAxis, YAxis } from "recharts";
 import { generateEraGradient } from "@/components/PoliticalEraBackground";
 import {
@@ -23,6 +23,7 @@ interface IndicatorChartProps {
 
 export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras, startYear, endYear }: IndicatorChartProps) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const chartId = useId();
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -34,7 +35,7 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras,
   }, []);
 
   // Use props if provided, otherwise derive from data
-  const minYear = startYear ?? (data.length > 0 ? data[0].year : 1900);
+  const minYear = startYear ?? (data.length > 0 ? data[0].year : 1960);
   const maxYear = endYear ?? (data.length > 0 ? data[data.length - 1].year : 2025);
   const countriesToOverlay = overlayEras || (countryCodes.length === 1 ? countryCodes : []);
   // Dynamically create a configuration for shadcn chart based on selected countries
@@ -185,6 +186,8 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras,
     return null;
   };
 
+  const getGradientId = (code: string) => `era-gradient-${code}-${chartId.replace(/:/g, '')}`;
+
   return (
     <div className="w-full flex-col flex items-start gap-4">
       {/* <h3 className="text-xl font-bold tracking-tight">{indicatorName}</h3> */}
@@ -203,6 +206,7 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras,
 
                 return generateEraGradient({
                   countryCode: code,
+                  id: getGradientId(code),
                   minYear: firstYear,
                   maxYear: lastYear,
                   opacity: countriesToOverlay.length > 1 ? 0.08 : 0.3,
@@ -218,6 +222,7 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras,
               tickMargin={12}
               minTickGap={32}
               domain={[minYear, maxYear]}
+              type="number"
             />
             <YAxis
               tickLine={false}
@@ -246,7 +251,7 @@ export function IndicatorChart({ data, countryCodes, indicatorName, overlayEras,
                 dataKey={code}
                 type="monotone"
                 connectNulls={true}
-                fill={`url(#era-gradient-${code})`}
+                fill={`url(#${getGradientId(code)})`}
                 stroke={`var(--color-${code})`}
                 strokeWidth={3}
                 strokeDasharray="6 8"
