@@ -1,41 +1,48 @@
 # Statsman
 
-**Statsman** is a highly interactive, modern web application designed to visualize economic and social metrics across countries, dynamically overlaid with political leadership and party data.
+**Statsman** is a professional-grade web application for visualizing global socio-economic metrics, uniquely integrated with historical political leadership data. It enables cross-sectional analysis by mapping World Bank indicators against custom political timelines, allowing users to evaluate national performance across different leadership eras and party regimes in a single, intuitive interface.
 
-By natively integrating World Bank data with custom political timelines, Statsman enables users to intuitively track and compare national performance across specific political eras (e.g., comparing literacy rates and GDP growth across the distinct reigns of different leaders).
+---
 
-## ✨ Features
-- **Dynamic Visualizations:** Rich, interactive multi-line and area charts engineered completely with Recharts and Shadcn UI.
-- **Political Era Overlays:** Translucent shading, SVG gradient stops, and precise alternating opacities map ruling parties and leaders directly onto the dataset's physical timeline.
-- **Advanced Interpolation:** Smooth dashed-line interpolation bridges empty data gaps seamlessly while intelligently pulling the nearest era-specific known facts directly into your active hover tooltip.
-- **Shareable State Management:** Real-time URL-driven state (via `nuqs`) allows for the easy sharing of precise multi-country and year-based filter comparisons.
-- **Light & Dark Mode:** Accessible global system theming supported natively via `next-themes`.
+## Core Capabilities
 
-## 🛠 Tech Stack
-- **Core Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4 + Shadcn UI
-- **Charts:** Recharts (utilizing `<AreaChart>` and advanced `<linearGradient>` SVG stops)
-- **State Management:** `nuqs` (Type-safe URL search query synchronization)
-- **Package Manager:** `pnpm`
+- **Interactive Visualizations**: High-performance multi-line and area charts built with Recharts and Shadcn UI.
+- **Political Era Overlays**: SVG-driven gradients and opacities map ruling parties and leaders directly onto the temporal data.
+- **Intelligent Data Interpolation**: Bridges data gaps with period-aware proximity tooltips, ensuring a continuous analytical experience.
+- **Deep-Link State Management**: Type-safe URL synchronization via `nuqs` for sharing precise multi-country and indicator comparisons.
+- **Curated Regional Dashboards**: Specialized views like the **India Dashboard**, featuring granular datasets including DPIIT-recognized startup growth.
+- **Adaptive Interface**: Native light and dark mode support with a focus on premium, responsive design.
 
-## 🚀 Getting Started
+## Technical Architecture
 
-Ensure you are using `pnpm` as your package manager, then install the dependencies:
+| Layer | System |
+| :--- | :--- |
+| **Framework** | Next.js 15 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS v4, Shadcn UI |
+| **Charts** | Recharts (SVG Linear Gradients) |
+| **State** | `nuqs` (URL Query Sync) |
+| **Package Manager** | `pnpm` |
 
-```bash
-pnpm install
-```
+## Getting Started
 
-Start the development server:
+1. **Install Dependencies**
+   ```bash
+   pnpm install
+   ```
 
-```bash
-pnpm dev
-```
+2. **Run Development Server**
+   ```bash
+   pnpm dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to interact with the dashboard.
+3. **Access Application**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📊 Data Strategy
-Statsman operates through a unique dual data strategy to guarantee fast and context-heavy renders:
-1. **Indicator Data:** Fetched concurrently through the official World Bank REST API, caching metrics securely to ensure optimal loading speeds and accurate metric exploration.
-2. **Political Data:** A modular, heavily curated static JSON dataset (`src/data/political.json`) natively maps specific rulers and political parties to tight yearly boundaries.
+## Data Strategy
+
+Statsman utilizes a hybrid strategy to ensure both speed and contextual depth:
+
+- **Global Indicators**: Concurrently fetched from the **World Bank REST API** with intelligent caching for optimal performance.
+- **Curated Series**: Integration of specialized regional data, such as Indian startup counts sourced from the **Open Government Data (OGD) Platform**.
+- **Political Metadata**: A modular, static JSON dataset mapping rulers and political parties to precise yearly boundaries.

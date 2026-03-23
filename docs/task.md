@@ -31,9 +31,13 @@
   - [x] Create dedicated India dashboard (`/india`) with curated metrics
   - [x] Add custom SVG icons (India flag, Github, etc.) and update Navigation Bar
   - [x] Implement UI for upcoming curated data series
+  - [x] Integrate Indian Startup dataset (DPIIT) and create dedicated `/india/startups` detail page.
 - [x] Phase 8: Polish & Refinement
   - [x] Fix tooltip data formatting scope and precision (IndicatorChart.tsx)
   - [x] Add a separator in the navbar to visually distinguish between the logo and dashboards.
   - [x] Curate a new color palette for the visualizations.
   - [x] Implement a collapsible navbar for mobile devices with smaller screens.
+  - [x] Implement chart interactivity with click-through links and ArrowUpRight hover animations.
+  - [x] Bugfix: Political era background alignment using per-country data bounding.
+  - [x] Typography refinement: Add Libre Baskerville serif and clean up font imports.
 

@@ -55,12 +55,17 @@ Create a highly interactive and stunning web application to visualize economic a
 - Create a dedicated dashboard `/india` that focuses entirely on India's specific structural and economic metrics.
 - Build a curated list of upcoming indicators (Inflation, Entrepreneurship, Renewable Energy, Railway Electrification).
 - Implement custom SVG component system for icons (e.g., India Flag, GitHub, Buy Me a Coffee) to replace external dependencies or generic icons in the global Navigation Bar.
+- Integrated curated Indian Startup data (DPIIT) with a dedicated detail page (`/india/startups`) and summary chart on the India Dashboard.
 
 #### Phase 8: Polish & Refinement
 - Fixed tooltip data formatting issues in `IndicatorChart.tsx`, resolving variable scope errors and fine-tuning numeric precision for trillion (T), billion (B), million (M), and thousand (K) scales to improve readability across different economic metrics.
 - Added a separator in the navbar to visually distinguish between the logo and dashboards.
 - Curated a new color palette for the visualizations.
 - Implemented a collapsible navbar for mobile devices with smaller screens.
+- Enhanced chart interactivity across all dashboards with clickable cards, linking World Bank indicators to the `/explore` view and custom series to their detail pages.
+- Implemented visual feedback on charts, including borders upon hover and animated exploration arrows (`ArrowUpRight`).
+- Fixed a critical political era alignment bug by implementing per-country data bounding and explicit `startYear`/`endYear` props for `IndicatorChart`, ensuring gradients map correctly to the active timeline.
+- Refined typography by introducing `Libre Baskerville` as a semantic serif face (`--font-serif`) and removing unused mono font variants to streamline the design system.
 
 ## Verification Plan
 
