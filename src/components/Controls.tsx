@@ -46,10 +46,10 @@ export function Controls({ initialIndicator, initialCountries, initialStart, ini
     } else {
       currentList.push(code);
       // Automatically inject Special Administrative Regions when China is enabled for composite tracking
-      if (code === "CHN") {
-        if (!currentList.includes("MAC")) currentList.push("MAC");
-        if (!currentList.includes("HKG")) currentList.push("HKG");
-      }
+      // if (code === "CHN") {
+      //   if (!currentList.includes("MAC")) currentList.push("MAC");
+      //   if (!currentList.includes("HKG")) currentList.push("HKG");
+      // }
     }
     setCountries(currentList.join(","));
   };
