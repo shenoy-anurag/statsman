@@ -105,7 +105,7 @@ export function KBarSearchComponent({ children }: { children: React.ReactNode })
       name: indicator.name,
       subtitle: indicator.shortName,
       keywords: `${indicator.name} ${indicator.shortName} ${indicator.id} indicator data`,
-      perform: () => router.push(`/explore?indicator=${indicator.id}`),
+      perform: () => router.push(`/explore?indicator=${indicator.id}&countries=CHN,IND,USA`),
       icon: <BarChart3 className="w-5 h-5 flex-shrink-0" />,
       section: "Data Indicators",
     })),
@@ -115,11 +115,11 @@ export function KBarSearchComponent({ children }: { children: React.ReactNode })
     <KBarProvider actions={actions}>
       <KBarPortal>
         <KBarPositioner className="z-[999999] bg-background/80 backdrop-blur-sm p-4">
-          <KBarAnimator className="w-full max-w-[600px] overflow-hidden rounded-xl border border-border bg-card shadow-2xl transition-all">
+          <KBarAnimator className="w-full max-w-[600px] overflow-hidden rounded-none border border-border bg-card shadow-2xl transition-all">
             <div className="flex items-center gap-3 px-4 py-4 border-b border-border shadow-sm">
               <Search className="w-5 h-5 text-muted-foreground ml-1" />
               <KBarSearch className="w-full bg-transparent outline-none text-foreground placeholder:text-muted-foreground py-1 text-lg" placeholder="Type a command or search indicators..." />
-              <kbd className="flex items-center gap-1.5 rounded-md border border-border bg-muted/30 px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground opacity-60">
+              <kbd className="flex items-center gap-1.5 rounded-none border border-border bg-muted/30 px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground opacity-60">
                 <span className="text-xs">ESC</span>
               </kbd>
             </div>
@@ -147,11 +147,10 @@ function RenderResults() {
           </div>
         ) : (
           <div
-            className={`flex items-center justify-between px-4 py-3.5 mx-2 my-0.5 cursor-pointer rounded-lg transition-all duration-200 ${
-              active 
-                ? "bg-primary/10 text-primary border-l-4 border-primary shadow-inner" 
-                : "text-muted-foreground hover:bg-muted/40 hover:text-foreground"
-            }`}
+            className={`flex items-center justify-between px-4 py-3.5 mx-2 my-0.5 cursor-pointer rounded-none transition-all duration-200 ${active
+              ? "bg-primary/10 text-primary border-l-4 border-primary shadow-inner"
+              : "text-muted-foreground hover:bg-muted/40 hover:text-foreground"
+              }`}
           >
             <div className="flex items-center gap-4">
               {item.icon && <div className={`${active ? "text-primary" : "text-muted-foreground"} transition-colors`}>{item.icon}</div>}
@@ -165,7 +164,7 @@ function RenderResults() {
                 {item.shortcut.map((sc) => (
                   <kbd
                     key={sc}
-                    className={`flex h-6 min-w-6 items-center justify-center rounded px-1.5 border border-border bg-muted/60 text-[11px] font-bold ${active ? "text-primary border-primary/30" : "text-muted-foreground"}`}
+                    className={`flex h-6 min-w-6 items-center justify-center rounded-none px-1.5 border border-border bg-muted/60 text-[11px] font-bold ${active ? "text-primary border-primary/30" : "text-muted-foreground"}`}
                   >
                     {sc.toUpperCase()}
                   </kbd>
