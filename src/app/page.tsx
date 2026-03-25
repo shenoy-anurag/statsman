@@ -3,13 +3,14 @@ import { getMergedChartData } from "@/lib/data-merger";
 import { INDICATORS_MAP, TOP_INDICATORS, INDICATOR_CATEGORIES } from "@/constants/indicators";
 import Link from "next/link";
 import { PaperTexture } from "@/components/PaperTexture";
+import { CategorySection } from "@/components/CategorySection";
 
 export default async function DashboardHome() {
   const countryCodes = ["IND", "CHN", "USA"];
   const startYear = 1976;
   const endYear = 2024;
 
-  // Fetch data for all top indicators
+  // Fetch data for the hero charts server-side (fast initial paint)
   const chartsData = await Promise.all(
     TOP_INDICATORS.map(async (indicatorCode) => {
       const data = await getMergedChartData(indicatorCode, countryCodes, startYear, endYear);
@@ -26,26 +27,6 @@ export default async function DashboardHome() {
   const topChartIndicatorCode = "NY.GDP.MKTP.CD";
   const topChartIndicatorName = "GDP (current US$)";
   const topChartData = await getMergedChartData(topChartIndicatorCode, topChartCountries, startYear, endYear);
-
-  // Fetch data for all categorized indicators
-  const categoriesData = await Promise.all(
-    INDICATOR_CATEGORIES.map(async (category) => {
-      const categoryCharts = await Promise.all(
-        category.indicators.map(async (indicatorCode) => {
-          const data = await getMergedChartData(indicatorCode, countryCodes, startYear, endYear);
-          return {
-            indicatorCode,
-            config: INDICATORS_MAP[indicatorCode],
-            data,
-          };
-        })
-      );
-      return {
-        ...category,
-        charts: categoryCharts,
-      };
-    })
-  );
 
   return (
     <main className="min-h-screen bg-background text-foreground p-6 md:p-12 xl:p-16 w-full mx-auto flex flex-col gap-8 md:gap-12 transition-all">
@@ -112,60 +93,28 @@ export default async function DashboardHome() {
         })}
       </section>
 
-      {/* ── Categorized Indicator Sections ──────────────────────────────── */}
-      {categoriesData.map((category, catIdx) => (
-        <section key={category.id} className="w-full flex flex-col gap-6 mt-4">
-          <div
-            className="flex flex-col gap-2 max-w-3xl animate-in fade-in slide-in-from-bottom-6 duration-700 fill-mode-both"
-            style={{ animationDelay: `${catIdx * 120}ms` }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
-              {category.title}
-            </h2>
-            <p className="text-base text-muted-foreground leading-relaxed">
-              {category.description}
-            </p>
-          </div>
+      {/* ── Categorized Indicator Sections (lazy-loaded & collapsible) ── */}
+      <div className="w-full flex flex-col gap-2 mt-8">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-muted-foreground">
+            Deep-Dive Indicators
+          </h2>
+        </div>
+        <div className="h-px w-full bg-border mb-2" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
-            {category.charts.map((item, index) => {
-              if (!item.config) return null;
-
-              return (
-                <Link
-                  key={item.indicatorCode}
-                  href={`/explore?indicator=${item.indicatorCode}&countries=${countryCodes.join(",")}`}
-                  className="group block"
-                >
-                  <div
-                    className="bg-card/40 backdrop-blur-md rounded-none p-6 min-h-[400px] h-full animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both hover:border-primary/50 hover:bg-card/60 transition-all flex flex-col border border-transparent"
-                    style={{ animationDelay: `${(catIdx * 3 + index) * 80}ms` }}
-                  >
-                    <PaperTexture />
-                    <div className="mb-4 flex items-center justify-between">
-                      <h2 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                        {item.config.shortName}
-                      </h2>
-                      <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">
-                        Explore →
-                      </span>
-                    </div>
-                    <div className="w-full flex-grow relative min-h-[300px]">
-                      <IndicatorChart
-                        data={item.data}
-                        countryCodes={countryCodes}
-                        indicatorName={item.config.name}
-                        startYear={startYear}
-                        endYear={endYear}
-                      />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      ))}
+        {INDICATOR_CATEGORIES.map((category, catIdx) => (
+          <CategorySection
+            key={category.id}
+            category={category}
+            countryCodes={countryCodes}
+            startYear={startYear}
+            endYear={endYear}
+            categoryIndex={catIdx}
+            defaultOpen={false}
+          />
+        ))}
+      </div>
     </main>
   );
 }
+
