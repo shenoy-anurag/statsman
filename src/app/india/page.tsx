@@ -3,8 +3,6 @@ import { IndicatorChart } from "@/components/IndicatorChart";
 import { RailwayElectrificationChart } from "@/components/visualizations/RailwayElectrificationChart";
 import { PowerCapacityChart } from "@/components/visualizations/PowerCapacityChart";
 import { PowerGenerationChart } from "@/components/visualizations/PowerGenerationChart";
-import { TerrorismDeathsChart } from "@/components/visualizations/TerrorismDeathsChart";
-import { TerrorismAttacksChart } from "@/components/visualizations/TerrorismAttacksChart";
 
 import { getMergedChartData, MergedDataPoint } from "@/lib/data-merger";
 import { INDICATORS_MAP } from "@/constants/indicators";
@@ -25,6 +23,7 @@ export default async function IndiaDashboard() {
     "FP.CPI.TOTL.ZG",      // Inflation, CPI
     "SP.POP.TOTL",         // Population
     "EG.ELC.ACCS.ZS",      // Electricity access
+    "PV.TER.DTHS",         // Terrorism Deaths
   ];
 
 
@@ -150,43 +149,9 @@ export default async function IndiaDashboard() {
             </div>
           </div>
         </Link>
-        {/* Terrorism Deaths Chart */}
-        <div className="flex flex-col h-full group/link">
-          <div
-            className="bg-card/40 backdrop-blur-md rounded-none p-6 min-h-[400px] h-full animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both hover:border-primary/50 hover:bg-card/60 transition-all flex flex-col group/chart overflow-hidden relative border border-transparent"
-            style={{ animationDelay: "400ms" }}
-          >
-            <PaperTexture />
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold group-hover/link:text-primary transition-colors tracking-tight">Terrorism Deaths</h2>
-              <ArrowUpRight className="h-5 w-5 opacity-0 group-hover/chart:opacity-100 group-hover/chart:translate-x-1 group-hover/chart:-translate-y-1 transition-all text-primary" />
-            </div>
-            <div className="w-full flex-grow relative min-h-[300px]">
-              <TerrorismDeathsChart countryCodes={["IND"]} startYear={1970} endYear={2021} />
-            </div>
-          </div>
-        </div>
-
-        {/* Terrorism Attacks Chart */}
-        <div className="flex flex-col h-full group/link">
-          <div
-            className="bg-card/40 backdrop-blur-md rounded-none p-6 min-h-[400px] h-full animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both hover:border-primary/50 hover:bg-card/60 transition-all flex flex-col group/chart overflow-hidden relative border border-transparent"
-            style={{ animationDelay: "500ms" }}
-          >
-            <PaperTexture />
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold group-hover/link:text-primary transition-colors tracking-tight">Terrorist Attacks</h2>
-              <ArrowUpRight className="h-5 w-5 opacity-0 group-hover/chart:opacity-100 group-hover/chart:translate-x-1 group-hover/chart:-translate-y-1 transition-all text-primary" />
-            </div>
-            <div className="w-full flex-grow relative min-h-[300px]">
-              <TerrorismAttacksChart countryCodes={["IND"]} startYear={1970} endYear={2021} />
-            </div>
-          </div>
-        </div>
 
 
-
-        {/* Standard World Bank Indicators */}
+        {/* Standard World Bank + Custom Indicators */}
         {chartsData.map((item, index) => {
           if (!item.config || !item.data || item.data.length === 0) return null;
 
