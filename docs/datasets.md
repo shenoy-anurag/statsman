@@ -87,3 +87,21 @@ https://iced.niti.gov.in/energy/electricity/generation/power-generation
 
 ### Power Installed Capacity
 https://iced.niti.gov.in/energy/electricity/generation/capacity
+
+## Topic: Terrorism & Crime
+
+### Terrorism
+Source and citation
+Data sources:
+[National Consortium for the Study of Terrorism and Responses to Terrorism (START)](https://www.start.umd.edu/gtd/) (2022) Our World in Data – with major processing by Our World in Data
+
+Citation guidance: Please credit all sources listed above. Data provided by third-party sources through Our World in Data remains subject to the original providers' license terms.
+
+| Field | Value |
+|-------------|-------------|
+| URL | https://ourworldindata.org/terrorism |
+| Published On | 2021 |
+| Updated On | 2021 |
+| Data Fields | Entity, Code, Year, Fatalities, World region according to OWID |
+| File Name | terrorism-deaths.csv |
+
