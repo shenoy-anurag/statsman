@@ -79,6 +79,16 @@ export function KBarSearchComponent({ children }: { children: React.ReactNode })
       section: "India Dashboard",
     },
     {
+      id: "india-power",
+      name: "India Power Installed Capacity",
+      shortcut: ["p"],
+      keywords: "india power electricity solar wind coal nuclear installed capacity",
+      perform: () => router.push("/india/power"),
+      icon: <Sun className="w-5 h-5 flex-shrink-0" />,
+      section: "India Dashboard",
+    },
+
+    {
       id: "india-startups",
       name: "India Startups Dashboard",
       shortcut: ["s"],

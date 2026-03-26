@@ -85,8 +85,14 @@ https://en.wikipedia.org/wiki/Central_Organisation_for_Railway_Electrification#c
 ### Power Generation
 https://iced.niti.gov.in/energy/electricity/generation/power-generation
 
+FY 2025-26 data is updated as on January'26.
+Source: MNRE & CEA
+
 ### Power Installed Capacity
 https://iced.niti.gov.in/energy/electricity/generation/capacity
+
+FY 2025-26 data is updated as on January'26.
+Source: MNRE & CEA
 
 ## Topic: Terrorism & Crime
 
