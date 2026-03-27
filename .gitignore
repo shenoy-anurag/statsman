@@ -42,3 +42,4 @@ next-env.d.ts
 
 # User defined
 data/data-gov-india/
+!.env.example
