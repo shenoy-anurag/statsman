@@ -66,7 +66,7 @@
   - [x] Update India dashboard grid with single-column clickable cards
 - [ ] Phase 13: Future Enhancements
   - [ ] Auto-generated analysis of Political Eras - deltas, averages, percent change per year, explanations, key events / crises etc.
-  - [ ] Add Umami analytics.
+  - [x] Add Umami analytics.
   - [ ] Page for why I don't like to use Indices and surveys like Hunger Index, Happiness Index etc.
   - [ ] Pages on learning about the indicators, their history, how they are calculated, their limitations etc.
   - [ ] "Expand All / Collapse All" toggle for category sections on main dashboard

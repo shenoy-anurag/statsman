@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 };
 
 import { KBarSearchComponent } from "@/components/KBarSearch";
+import { Umami } from "@/components/Umami";
 
 export default function RootLayout({
   children,
@@ -51,6 +52,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={`${recursive.className} min-h-full flex flex-col bg-background text-foreground`} style={{ "--font-future": "'Future', 'Futura', sans-serif" } as React.CSSProperties}>
+        <Umami />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
