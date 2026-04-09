@@ -46,3 +46,16 @@ Statsman utilizes a hybrid strategy to ensure both speed and contextual depth:
 - **Global Indicators**: Concurrently fetched from the **World Bank REST API** with intelligent caching for optimal performance.
 - **Curated Series**: Integration of specialized regional data, such as Indian startup counts sourced from the **Open Government Data (OGD) Platform**.
 - **Political Metadata**: A modular, static JSON dataset mapping rulers and political parties to precise yearly boundaries.
+
+### Political Data Sources
+#### India
+https://en.wikipedia.org/wiki/List_of_prime_ministers_of_India#List
+
+#### China
+https://en.wikipedia.org/wiki/Paramount_leader#List_of_paramount_leaders
+
+#### United States of America
+https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States
+
+#### United Kingdom
+https://en.wikipedia.org/wiki/List_of_prime_ministers_of_the_United_Kingdom#Prime_ministers
