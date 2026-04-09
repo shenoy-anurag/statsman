@@ -24,14 +24,14 @@
     {
       "leader": "Morarji Desai",
       "party": "Janata Party",
-      "color": "#FF9933",
+      "color": "#1F75FE",
       "start": 1977,
       "end": 1979
     },
     {
       "leader": "Charan Singh",
       "party": "Janata Party",
-      "color": "#FF9933",
+      "color": "#06038D",
       "start": 1979,
       "end": 1980
     },
@@ -52,14 +52,14 @@
     {
       "leader": "V. P. Singh",
       "party": "Janata Dal",
-      "color": "#008000",
+      "color": "#2E8B57",
       "start": 1989,
       "end": 1990
     },
     {
       "leader": "Chandra Shekhar",
       "party": "Samajwadi Janata Party",
-      "color": "#808000",
+      "color": "#74C365",
       "start": 1990,
       "end": 1991
     },
@@ -80,14 +80,14 @@
     {
       "leader": "H. D. Deve Gowda",
       "party": "Janata Dal",
-      "color": "#008000",
+      "color": "#2E8B57",
       "start": 1996,
       "end": 1997
     },
     {
       "leader": "I. K. Gujral",
       "party": "Janata Dal",
-      "color": "#008000",
+      "color": "#2E8B57",
       "start": 1997,
       "end": 1998
     },
@@ -154,82 +154,180 @@
       "party": "CPC",
       "color": "#FF0000",
       "start": 2012,
-      "end": 2025
+      "end": 2026
     }
   ],
   "USA": [
     {
+      "leader": "William McKinley",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1897,
+      "end": 1901
+    },
+    {
+      "leader": "Theodore Reoosevelt",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1901,
+      "end": 1909
+    },
+    {
+      "leader": "William Howard Taft",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1909,
+      "end": 1913
+    },
+    {
+      "leader": "Woodrow Wilson",
+      "party": "Democratic",
+      "color": "#3333FF",
+      "start": 1913,
+      "end": 1921
+    },
+    {
+      "leader": "Warren G. Harding",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1921,
+      "end": 1923
+    },
+    {
+      "leader": "Calvin Coolidge",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1923,
+      "end": 1929
+    },
+    {
+      "leader": "Herbert Hoover",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1929,
+      "end": 1933
+    },
+    {
+      "leader": "Franklin D. Roosevelt",
+      "party": "Democratic",
+      "color": "#3333FF",
+      "start": 1933,
+      "end": 1945
+    },
+    {
+      "leader": "Harry S. Truman",
+      "party": "Democratic",
+      "color": "#3333FF",
+      "start": 1945,
+      "end": 1953
+    },
+    {
+      "leader": "Dwight D. Eisenhower",
+      "party": "Republican",
+      "color": "#E81B23",
+      "start": 1953,
+      "end": 1961
+    },
+    {
+      "leader": "John F. Kennedy",
+      "party": "Democratic",
+      "color": "#3333FF",
+      "start": 1961,
+      "end": 1963
+    },
+    {
+      "leader": "Lyndon B. Johnson",
+      "party": "Democratic",
+      "color": "#3333FF",
+      "start": 1963,
+      "end": 1969
+    },
+    {
       "leader": "Richard Nixon",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 1969,
       "end": 1974
     },
     {
       "leader": "Gerald Ford",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 1974,
       "end": 1977
     },
     {
       "leader": "Jimmy Carter",
       "party": "Democratic",
-      "color": "#0000FF",
+      "color": "#3333FF",
       "start": 1977,
       "end": 1981
     },
     {
       "leader": "Ronald Reagan",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 1981,
       "end": 1989
     },
     {
       "leader": "George H.W. Bush",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 1989,
       "end": 1993
     },
     {
       "leader": "Bill Clinton",
       "party": "Democratic",
-      "color": "#0000FF",
+      "color": "#3333FF",
       "start": 1993,
       "end": 2001
     },
     {
       "leader": "George W. Bush",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 2001,
       "end": 2009
     },
     {
       "leader": "Barack Obama",
       "party": "Democratic",
-      "color": "#0000FF",
+      "color": "#3333FF",
       "start": 2009,
       "end": 2017
     },
     {
       "leader": "Donald Trump",
       "party": "Republican",
-      "color": "#FF0000",
+      "color": "#E81B23",
       "start": 2017,
       "end": 2021
     },
     {
       "leader": "Joe Biden",
       "party": "Democratic",
-      "color": "#0000FF",
+      "color": "#3333FF",
       "start": 2021,
       "end": 2025
     }
   ],
   "GBR": [
+    {
+      "leader": "Harold Macmillan",
+      "party": "Labour",
+      "color": "#E4003B",
+      "start": 1957,
+      "end": 1963
+    },
+    {
+      "leader": "Alec Douglas-Home",
+      "party": "Labour",
+      "color": "#E4003B",
+      "start": 1963,
+      "end": 1964
+    },
     {
       "leader": "Harold Wilson",
       "party": "Labour",
@@ -319,7 +417,7 @@
       "party": "Labour",
       "color": "#E4003B",
       "start": 2024,
-      "end": 2025
+      "end": 2027
     }
   ],
   "DEU": [
